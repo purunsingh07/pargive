@@ -17,7 +17,4 @@
   50% { transform: translateX(-50%) translateY(-16px); }
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
+

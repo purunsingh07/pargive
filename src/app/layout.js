@@ -31,13 +31,19 @@ export const metadata = {
   keywords: 'golf, premium golf, golf courses, golf membership, par, golfing',
 };
 
+import { AuthProvider } from '@/context/AuthContext';
+
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfair.variable} antialiased`}
     >
-      <body className="grain-overlay">{children}</body>
+      <body className="grain-overlay">
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }

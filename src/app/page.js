@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative h-screen w-full bg-[radial-gradient(ellipse_120%_80%_at_50%_60%,rgba(200,210,220,0.6)_0%,transparent_60%),radial-gradient(ellipse_80%_50%_at_20%_80%,rgba(190,200,210,0.5)_0%,transparent_50%),radial-gradient(ellipse_80%_50%_at_85%_65%,rgba(195,205,215,0.5)_0%,transparent_50%),linear-gradient(180deg,#dce2e8_0%,#e4e9ee_30%,#d8dfe6_60%,#c8d2dc_100%)] overflow-hidden">
+    <div className="relative min-h-screen w-full bg-[radial-gradient(ellipse_120%_80%_at_50%_60%,rgba(200,210,220,0.6)_0%,transparent_60%),radial-gradient(ellipse_80%_50%_at_20%_80%,rgba(190,200,210,0.5)_0%,transparent_50%),radial-gradient(ellipse_80%_50%_at_85%_65%,rgba(195,205,215,0.5)_0%,transparent_50%),linear-gradient(180deg,#dce2e8_0%,#e4e9ee_30%,#d8dfe6_60%,#c8d2dc_100%)]">
       {/* Bottom mist gradient */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[5] h-[35%] bg-gradient-to-t from-[rgba(200,210,220,0.85)] to-transparent" />
 
@@ -37,16 +38,13 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Close button */}
-        <button
-          className="flex h-9 w-9 items-center justify-center text-foreground/60 transition-colors hover:text-foreground"
-          aria-label="Close"
+        {/* Auth button */}
+        <Link
+          href="/login"
+          className="rounded-full bg-foreground px-6 py-2 text-[0.8rem] font-bold text-white transition-all hover:bg-[#1a4a42] hover:shadow-lg active:scale-95"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
+          Sign In
+        </Link>
       </nav>
 
       {/* ─── HERO HEADLINE (behind island) ─── */}
